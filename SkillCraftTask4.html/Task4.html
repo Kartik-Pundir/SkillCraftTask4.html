@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="Task4.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="landing-content">
+            <h1 class="landing-title">Welcome to Your Daily Planner</h1>
+            <p class="landing-subtitle">Organize your life with ease</p>
+            <button id="start-btn" class="start-btn">Start Planning</button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard hidden">
+        <header class="dashboard-header">
+            <h1 id="greeting">Good Day, User!</h1>
+            <button id="theme-toggle" class="theme-toggle">🌓</button>
+        </header>
+
+        <div class="columns-container">
+            <!-- Calendar Column -->
+            <div class="column calendar-column">
+                <h2>🗓️ Calendar</h2>
+                <div class="month-header">
+                    <button id="prev-month" class="nav-btn">◀</button>
+                    <h3 id="current-month">Month Year</h3>
+                    <button id="next-month" class="nav-btn">▶</button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div id="calendar-days" class="calendar-days"></div>
+            </div>
+
+            <!-- Tasks Column -->
+            <div class="column tasks-column">
+                <h2>📝 Tasks for <span id="selected-date">Select a date</span></h2>
+                <div class="task-input">
+                    <input type="text" id="task-input" placeholder="Add a new task...">
+                    <input type="time" id="task-time">
+                    <button id="add-task-btn">Add</button>
+                </div>
+                <div id="task-list" class="task-list"></div>
+            </div>
+
+            <!-- Summary Column -->
+            <div class="column summary-column">
+                <h2>📊 Summary</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-tasks">0</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="completed-tasks">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="pending-tasks">0</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+                </div>
+                <div id="motivation" class="motivation">Let's get started!</div>
+                <div class="notes">
+                    <h3>Notes</h3>
+                    <textarea id="notes-input" placeholder="Add any notes here..."></textarea>
+                    <button id="save-notes-btn">Save Notes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Task4.js"></script>
+</body>
+</html>
